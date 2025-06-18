@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sumathe Mechanic – Bike Service & Repair</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <style>
+    /* Logo pulse on hover */
+    #logo:hover { animation: pulse 1s infinite; }
+    @keyframes pulse { 0%,100%{transform:scale(1);} 50%{transform:scale(1.05);} }
+    /* Text shadow helper */
+    .text-shadow { text-shadow:0 1px 3px rgba(0,0,0,.6); }
+  </style>
+</head>
+<body class="font-sans antialiased text-gray-800 bg-white scroll-smooth">
+  <!-- Header -->
+  <header class="bg-blue-700 text-white shadow sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-2 flex justify-between items-center">
+      <!-- Logo + brand -->
+      <div class="flex items-center gap-2">
+        <img id="logo" src="Logo.jpg" alt="Sumathe Mechanic Logo" class="h-10 w-10 rounded-full bg-white p-1 shadow-lg transition-transform" />
+        <span class="hidden sm:inline text-lg sm:text-2xl font-bold tracking-wide">Sumathe Mechanic</span>
+      </div>
+      <!-- Desktop Nav -->
+      <nav class="hidden sm:flex space-x-8 text-sm font-medium items-center">
+        <!-- Location link -->
+        <a href="https://maps.app.goo.gl/qoGSuXtns1G4XjtM6" target="_blank" class="flex items-center gap-1 hover:text-gray-200">
+          <!-- map pin icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 11c1.657 0 3-1.343 3-3S13.657 5 12 5s-3 1.343-3 3 1.343 3 3 3z" /><path stroke-linecap="round" stroke-linejoin="round" d="M19.428 15.341A8 8 0 004.572 15.34" /></svg>
+          <span>Location</span>
+        </a>
+        
+        <a href="#about" class="hover:text-gray-200">About</a>
+        <a href="#services" class="hover:text-gray-200">Services</a>
+        <a href="#book" class="hover:text-gray-200">Book Now</a>
+        <a href="#contact" class="hover:text-gray-200">Contact</a>
+      </nav>
+      <!-- Mobile menu btn -->
+      <button class="sm:hidden" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" aria-label="Toggle Menu">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-7 h-7">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="sm:hidden hidden bg-blue-800 text-white px-4 py-3 space-y-3">
+      <a href="#about" class="block">About</a>
+      <a href="#services" class="block">Services</a>
+      <a href="#book" class="block">Book Now</a>
+      <a href="#contact" class="block">Contact</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="hero" class="relative">
+    <!-- 👉 Replace hero.jpg with your own local image -->
+    <div class="h-64 sm:h-[28rem] bg-cover bg-center" style="background-image:url('Main.jpg');"></div>
+    <div class="absolute inset-0 bg-blue-900/60 flex flex-col items-center justify-center text-center text-white px-4">
+      <h1 class="text-2xl sm:text-4xl font-extrabold mb-3 text-shadow">Fast, Reliable Bike Repairs</h1>
+      <p class="mb-6 text-sm sm:text-base text-shadow">Pick‑up & Delivery within 5–10 km (Visiting Charges ₹199) • Open 24/7 <br> To get more Information</p>
+      <a href="https://wa.me/918667586994?text=Hi%20Praveen%20bro%2C%20I%20would%20like%20to%20get%20more%20details%20about%20bike%20services." target="_blank" class="inline-block bg-green-500 hover:bg-green-600 transition rounded-lg px-6 py-3 text-sm sm:text-base font-semibold shadow-lg">Contact Us in Whatsapp</a>
+    </div>
+  </section>
+
+<!-- About -->
+<section id="about" class="max-w-7xl mx-auto px-6 py-12">
+  <h2 class="text-xl sm:text-2xl font-semibold mb-6 text-center">About Us</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+    <!-- About Image -->
+    <div>
+      <img src="Logo.jpg" alt="Sumathe Mechanic Workshop" class="rounded-xl shadow-lg w-full max-w-xs mx-auto object-cover" />
+    </div>
+
+    <!-- About Text -->
+    <div>
+      <p class="text-gray-700 leading-relaxed text-sm sm:text-base">
+        With over <strong>25 years of experience</strong>, <strong>Sumathe Mechanic</strong> has been trusted by thousands for reliable and affordable two-wheeler care. From quick water washes to full engine rebuilds, we handle it all with precision. Our <em>pick-up & delivery</em> service covers a 5–10 km radius around Perungudi, Chennai — helping you save time while we take care of your ride.
+      </p>
+      <!-- Social Links -->
+      <div class="mt-4 flex gap-4 items-center">
+        <a href="https://wa.me/918667586994?text=Hi%20Praveen%20sir%2C%20I%20would%20like%20to%20get%20more%20details%20about%20bike%20services." target="_blank" class="inline-flex items-center gap-2 text-green-600 hover:text-green-800 text-sm">
+          <img src="WhatsApplogo.webp" alt="WhatsApp" class="w-5 h-5"> WhatsApp
+        </a>
+        <a href="https://youtube.com/@chennaimechanictamil4438?si=ayDa1kRiRfdXskHP" target="_blank" class="inline-flex items-center gap-2 text-red-600 hover:text-red-800 text-sm">
+          <img src="yt.webp" alt="YouTube" class="w-5 h-5"> YouTube
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Glassmorphism Service Grid -->
+<div class="mt-12 max-w-5xl mx-auto p-8 rounded-xl bg-white/30 backdrop-blur-md shadow-2xl border border-gray-200">
+  <h3 class="text-2xl font-extrabold text-blue-799 mb-6 text-center">
+    Bike Full Service – What's Included (₹799)
+  </h3>
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 text-gray-800 text-sm font-medium">
+    <div class="bg-white/80 p-4 rounded-lg shadow-md hover:scale-105 transition"><span class="text-blue-600">✔</span> Carburettor clean</div>
+    <div class="bg-white/80 p-4 rounded-lg shadow-md hover:scale-105 transition"><span class="text-blue-600">✔</span> Front & Back brake shoe clean</div>
+    <div class="bg-white/80 p-4 rounded-lg shadow-md hover:scale-105 transition"><span class="text-blue-600">✔</span> Oil lubrication</div>
+    <div class="bg-white/80 p-4 rounded-lg shadow-md hover:scale-105 transition"><span class="text-blue-600">✔</span> Air filter cleaning</div>
+    <div class="bg-white/80 p-4 rounded-lg shadow-md hover:scale-105 transition"><span class="text-blue-600">✔</span> Chain adjustment</div>
+    <div class="bg-white/80 p-4 rounded-lg shadow-md hover:scale-105 transition"><span class="text-blue-600">✔</span> Spark plug clean</div>
+    <div class="bg-white/80 p-4 rounded-lg shadow-md hover:scale-105 transition"><span class="text-blue-600">✔</span> Complete wiring check</div>
+    <div class="bg-white/80 p-4 rounded-lg shadow-md hover:scale-105 transition"><span class="text-blue-600">✔</span> Clutch adjustment (grease pack)</div>
+    <div class="bg-white/80 p-4 rounded-lg shadow-md hover:scale-105 transition"><span class="text-blue-600">✔</span> Brake adjustment</div>
+    <div class="bg-white/80 p-4 rounded-lg shadow-md hover:scale-105 transition"><span class="text-blue-600">✔</span> Extra spare replacement (If needed)</div>
+  </div>
+  <div class="mt-6 text-center text-sm text-gray-800 border-t pt-4">
+    <p class="mb-1 italic">Need everything done at once?</p>
+    <p class="font-bold text-lg text-blue-800">Complete Care Package – ₹1,399</p>
+    <p class="text-gray-600 text-xs">(Includes Full Service + Engine Oil Change ₹450 + Water Wash ₹150)</p>
+    <p class="text-gray-600 text-xs">Pick‑up & Delivery within 5–10 km (Visiting Charges ₹199)</p>
+  </div>
+</div>
+
+
+
+  <!-- Services -->
+  <section id="services" class="bg-gray-100 py-12">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-xl sm:text-2xl font-semibold text-center mb-8">Our Services</h2>
+
+      <!-- Service Grid -->
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+
+        <!-- Bike Full Service -->
+<a href="https://wa.me/918667586994?text=Hi%20Praveen%20bro%2C%20I%20need%20to%20know%20about%20Bike%20Full%20Service." target="_blank" class="group relative rounded-lg shadow overflow-hidden block">
+  <img src="full ser.jpg" alt="Bike Full Service" class="w-full h-48 object-cover transition-transform group-hover:scale-105 duration-300" />
+  <div class="absolute inset-0 bg-black/60 flex flex-col items-center justify-center text-white px-2 text-lg font-semibold text-center leading-snug">
+    Full Service<br>(₹799)
+  </div>
+</a>
+
+<!-- Engine Oil Change -->
+<a href="https://wa.me/918667586994?text=Hi%20Praveen%20bro%2C%20I%20need%20to%20know%20about%20Engine%20Oil%20Change." target="_blank" class="group relative rounded-lg shadow overflow-hidden block">
+  <img src="oil change.jpg" alt="Engine Oil Change" class="w-full h-48 object-cover transition-transform group-hover:scale-105 duration-300" />
+  <div class="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-white px-2 text-lg font-semibold text-center leading-snug">
+    Engine Oil Change<br>(₹450)
+  </div>
+</a>
+
+<!-- Water Wash -->
+<a href="https://wa.me/918667586994?text=Hi%20Praveen%20bro%2C%20I%20need%20to%20know%20about%20Water%20Wash." target="_blank" class="group relative rounded-lg shadow overflow-hidden block">
+  <img src="bike water wash.jpg" alt="Water Wash" class="w-full h-48 object-cover transition-transform group-hover:scale-105 duration-300" />
+  <div class="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-white px-2 text-lg font-semibold text-center leading-snug">
+    Water Wash<br>(₹150)
+  </div>
+</a>
+
+<!-- Painting -->
+<a href="https://wa.me/918667586994?text=Hi%20Praveen%20bro%2C%20I%20need%20to%20know%20about%20Painting." target="_blank" class="group relative rounded-lg shadow overflow-hidden block">
+  <img src="paint.jpg" alt="Painting" class="w-full h-48 object-cover transition-transform group-hover:scale-105 duration-300" />
+  <div class="absolute inset-0 bg-black/50 flex items-center justify-center text-white px-2 text-lg font-semibold text-center">Painting(Design & Price) <br> Based on Customer Query</div>
+</a>
+
+<!-- Engine Work -->
+<a href="https://wa.me/918667586994?text=Hi%20Praveen%20bro%2C%20I%20need%20to%20know%20about%20Engine%20Work." target="_blank" class="group relative rounded-lg shadow overflow-hidden block">
+  <img src="Engine works.jpg" alt="Engine Work" class="w-full h-48 object-cover transition-transform group-hover:scale-105 duration-300" />
+  <div class="absolute inset-0 bg-black/50 flex items-center justify-center text-white px-2 text-lg font-semibold text-center">Engine Work</div>
+</a>
+
+<!-- Battery change -->
+<a href="https://wa.me/918667586994?text=Hi%20Praveen%20bro%2C%20I%20need%20to%20know%20about%20Battery%20Change." target="_blank" class="group relative rounded-lg shadow overflow-hidden block">
+  <img src="batterychange.jpg" alt="batterychange" class="w-full h-48 object-cover transition-transform group-hover:scale-105 duration-300" />
+  <div class="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-white px-2 text-lg font-semibold text-center leading-snug">
+    Battery Change
+  </div>
+</a>
+
+<!-- Bike Chain Service -->
+<a href="https://wa.me/918667586994?text=Hi%20Praveen%20bro%2C%20I%20need%20to%20know%20about%20Bike%20Chain%20Services." target="_blank" class="group relative rounded-lg shadow overflow-hidden block">
+  <img src="bike chain.jpg" alt="Bike Chain services" class="w-full h-48 object-cover transition-transform group-hover:scale-105 duration-300" />
+  <div class="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-white px-2 text-lg font-semibold text-center leading-snug">
+    Chain Services
+  </div>
+</a>
+
+<!-- Bike Brake shoe -->
+<a href="https://wa.me/918667586994?text=Hi%20Praveen%20bro%2C%20I%20need%20to%20know%20about%20Bike%20Brake%20Shoe%20and%20Brake%20Related%20Services." target="_blank" class="group relative rounded-lg shadow overflow-hidden block">
+  <img src="bike break shoe.jpg" alt="bike brake shoe" class="w-full h-48 object-cover transition-transform group-hover:scale-105 duration-300" />
+  <div class="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-white px-2 text-lg font-semibold text-center leading-snug">
+    Brake Related Services
+  </div>
+</a>
+
+    </div>
+  </section>
+
+  <!-- Book Now CTA -->
+<section id="book" class="max-w-7xl mx-auto px-6 py-14 text-center">
+  <h2 class="text-xl sm:text-2xl font-semibold mb-4">Book Your Trusted Bike Service Now</h2>
+  <p class="text-gray-700 mb-6">
+    25+ Years of Experience | Quality Two-Wheeler Service | On-Time Delivery<br>
+    Tap below to schedule your appointment or ask your queries directly on WhatsApp.
+  </p>
+  <a href="https://wa.me/918667586994?text=Hi%20Praveen%20bro%2C%20I%20would%20like%20to%20get%20more%20details%20about%20bike%20services." 
+     target="_blank" 
+     class="inline-block bg-green-500 hover:bg-green-600 transition rounded-lg px-6 py-3 text-sm sm:text-base font-semibold shadow-lg">
+    Book Service on WhatsApp
+  </a>
+</section>
+
+
+
+
+<!-- Contact -->
+<section id="contact" class="bg-blue-700 text-white">
+
+  <!-- Top Centered Contact Info Heading -->
+  <div class="text-center pt-10 pb-4">
+    <h1 class="text-3xl font-bold tracking-wide text-white">
+       Contact Info 
+    </h1>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-6 pb-14 flex flex-col sm:flex-row sm:justify-between gap-6">
+
+    <!-- Left: Address, Shop Name, Experience, Phone -->
+    <div class="space-y-4 text-sm sm:text-base">
+      <!-- Shop Name & Experience -->
+      <h2 class="text-2xl sm:text-3xl font-extrabold tracking-wide text-black-300 drop-shadow-md">
+    Sumathe Mechanics
+</h2>
+      <p>25+ Years of Professional Experience</p>
+
+      <!-- Address -->
+      <p class="flex items-center gap-2">
+        <span class="text-lg">📍</span>
+        29E, 7th Street, Anjugam Ammayar Street, Perungudi, Chennai - 600 096
+      </p>
+
+      <!-- Phone Numbers -->
+      <p class="flex items-center gap-2">
+        <span class="text-green-400 font-semibold text-lg">📞</span>
+        <a href="tel:+918667586994" class="hover:underline hover:text-gray-300 transition">+91 86675 86994</a>
+      </p>
+      <p class="flex items-center gap-2">
+        <span class="text-green-400 font-semibold text-lg">📞</span>
+        <a href="tel:+916383555958" class="hover:underline hover:text-gray-300 transition">+91 63835 55958</a>
+      </p>
+    </div>
+
+    <!-- Right: Location Link -->
+    <div class="flex flex-col items-start">
+      <a href="https://maps.app.goo.gl/qoGSuXtns1G4XjtM6" target="_blank" class="flex items-center gap-2 hover:text-gray-200">
+        <span class="text-red-400 text-lg">📍</span>
+        <span>Location on Map</span>
+      </a>
+    </div>
+  </div>
+</section>
+</body>
+</html>
+
