@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://logidharanir.github.io/SumatheMechanicShop/sitemap.xml
