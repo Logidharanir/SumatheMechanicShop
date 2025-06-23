@@ -14,6 +14,44 @@
     @keyframes pulse { 0%,100%{transform:scale(1);} 50%{transform:scale(1.05);} }
     /* Text shadow helper */
     .text-shadow { text-shadow:0 1px 3px rgba(0,0,0,.6); }
+
+    .section-heading {
+  font-size: 1.75rem; /* text-2xl */
+  font-weight: 800;   /* bold */
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #1e3a8a; /* brand blue */
+  text-shadow:
+    0 0 5px rgba(30, 58, 138, 0.4),
+    0 0 10px rgba(30, 58, 138, 0.3),
+    0 0 15px rgba(30, 58, 138, 0.2);
+  letter-spacing: 1px;
+  animation: glowPulse 2.5s ease-in-out infinite;
+}
+
+@media (min-width: 640px) {
+  .section-heading {
+    font-size: 2rem;
+  }
+}
+
+/* Animation for glowing pulse */
+@keyframes glowPulse {
+  0%, 100% {
+    text-shadow:
+      0 0 5px rgba(30, 58, 138, 0.4),
+      0 0 10px rgba(30, 58, 138, 0.3),
+      0 0 15px rgba(30, 58, 138, 0.2);
+  }
+  50% {
+    text-shadow:
+      0 0 10px rgba(30, 58, 138, 0.8),
+      0 0 20px rgba(30, 58, 138, 0.5),
+      0 0 25px rgba(30, 58, 138, 0.4);
+  }
+}
+
+
   </style>
 </head>
 <body class="font-sans antialiased text-gray-800 bg-white scroll-smooth">
@@ -68,7 +106,7 @@
 
 <!-- About -->
 <section id="about" class="max-w-7xl mx-auto px-6 py-12">
-  <h2 class="text-xl sm:text-2xl font-semibold mb-6 text-center">About Us</h2>
+  <h2 class="section-heading">About Us</h2>
   <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
     <!-- About Image -->
     <div>
@@ -123,8 +161,7 @@
   <!-- Services -->
   <section id="services" class="bg-gray-100 py-12">
     <div class="max-w-7xl mx-auto px-6">
-      <h2 class="text-xl sm:text-2xl font-semibold text-center mb-8">Our Services</h2>
-
+      <h2 class="section-heading">Our Services</h2>
       <!-- Service Grid -->
       <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
 
@@ -191,13 +228,42 @@
     </div>
   </section>
 
-  <!-- Book Now CTA -->
-<section id="book" class="max-w-7xl mx-auto px-6 py-14 text-center">
-  <h2 class="text-xl sm:text-2xl font-semibold mb-4">Book Your Trusted Bike Service Now</h2>
-  <p class="text-gray-700 mb-6">
+<section id="book" class="max-w-7xl mx-auto px-6 py-16 text-center">
+  <h2 class="section-heading">Book Your Trusted Bike Service Now</h2>
+
+  <p class="text-gray-700 mb-8">
     14 Years of Experience | Quality Two-Wheeler Service | On-Time Delivery<br>
     Tap below to schedule your appointment or ask your queries directly on WhatsApp.
   </p>
+
+
+ <!-- Booking Highlights -->
+<div class="grid gap-6 sm:grid-cols-2 md:grid-cols-4 mb-8">
+  <div class="card-glass hover:scale-105 transition p-4 text-sm font-medium text-gray-800 shadow-md rounded-xl">
+    🛠 Services <span class="font-semibold text-blue-700">Available 24/7</span>
+  </div>
+  <div class="card-glass hover:scale-105 transition p-4 text-sm font-medium text-gray-800 shadow-md rounded-xl">
+    📦 Pickup & Delivery <span class="block text-blue-700">within 10 km</span>
+  </div>
+  <div class="card-glass hover:scale-105 transition p-4 text-sm font-medium text-gray-800 shadow-md rounded-xl">
+    💳 Cash / UPI <span class="text-blue-700">Payments Accepted</span>
+  </div>
+  <div class="card-glass hover:scale-105 transition p-4 text-sm font-medium text-gray-800 shadow-md rounded-xl">
+    🛠️ Trusted by <span class="text-blue-700">1000+ Happy Bike Owners</span>
+  </div>
+  <div class="card-glass hover:scale-105 transition p-4 text-sm font-medium text-gray-800 shadow-md rounded-xl">
+    📆 Flexible Booking — <span class="text-blue-700">Call or WhatsApp Anytime</span>
+  </div>
+  <div class="card-glass hover:scale-105 transition p-4 text-sm font-medium text-gray-800 shadow-md rounded-xl">
+    🧰 Multi-Brand Support: <span class="text-blue-700">Honda, TVS, Hero, Yamaha & More</span>
+  </div>
+  <div class="card-glass hover:scale-105 transition p-4 text-sm font-medium text-gray-800 shadow-md rounded-xl">
+    🛡️ Genuine Parts <span class="text-blue-700">Quality Guaranteed</span>
+  </div>
+</div>
+
+
+  <!-- CTA Button -->
   <a href="https://wa.me/918667586994?text=Hi%20Praveen%20bro%2C%20I%20would%20like%20to%20get%20more%20details%20about%20bike%20services." 
      target="_blank" 
      class="inline-block bg-green-500 hover:bg-green-600 transition rounded-lg px-6 py-3 text-sm sm:text-base font-semibold shadow-lg">
@@ -207,15 +273,12 @@
 
 
 
-
 <!-- Contact -->
 <section id="contact" class="bg-blue-700 text-white">
 
   <!-- Top Centered Contact Info Heading -->
   <div class="text-center pt-10 pb-4">
-    <h1 class="text-3xl font-bold tracking-wide text-white">
-       Contact Info 
-    </h1>
+    <h2 class="section-heading text-white">Contact Info</h2>
   </div>
 
   <div class="max-w-7xl mx-auto px-6 pb-14 flex flex-col sm:flex-row sm:justify-between gap-6">
@@ -257,15 +320,11 @@
 <!-- Your other content -->
 
 <script>
-  // toggle open/close
-  const btn = document.querySelector('button[aria-label="Toggle Menu"]');
-  const menu = document.getElementById('mobile-menu');
-  btn.addEventListener('click', () => menu.classList.toggle('show'));
-
-  // close when a link is tapped
-  menu.querySelectorAll('a').forEach(a =>
-    a.addEventListener('click', () => menu.classList.remove('show'))
-  );
+  document.querySelectorAll('#mobile-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+      document.getElementById('mobile-menu').classList.add('hidden');
+    });
+  });
 </script>
 </body>
 </html>
