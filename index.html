@@ -257,11 +257,15 @@
 <!-- Your other content -->
 
 <script>
-  document.querySelectorAll('#mobile-menu a').forEach(link => {
-    link.addEventListener('click', () => {
-      document.getElementById('mobile-menu').classList.add('hidden');
-    });
-  });
+  // toggle open/close
+  const btn = document.querySelector('button[aria-label="Toggle Menu"]');
+  const menu = document.getElementById('mobile-menu');
+  btn.addEventListener('click', () => menu.classList.toggle('show'));
+
+  // close when a link is tapped
+  menu.querySelectorAll('a').forEach(a =>
+    a.addEventListener('click', () => menu.classList.remove('show'))
+  );
 </script>
 </body>
 </html>
