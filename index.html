@@ -254,6 +254,14 @@
     </div>
   </div>
 </section>
+<!-- Your other content -->
+
+<script>
+  document.querySelectorAll('#mobile-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+      document.getElementById('mobile-menu').classList.add('hidden');
+    });
+  });
+</script>
 </body>
 </html>
-
